@@ -1,0 +1,66 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+#line1{
+	color: #0088BB;
+	list-style-position: inside;
+	font-size: 16px;
+	position: relative;
+	left: 5%;
+}
+#line2{
+	border: 1px solid;
+}
+#userpass{
+	text-align: center;
+}
+#userpass a{
+	text-decoration: none;
+}
+#sname{
+	font-weight: bold;
+	position: relative;
+	top: -19px;
+}
+#sul ul li{
+	border-bottom: 1px solid;
+	background-color: white;
+	list-style: none;
+	margin-top: 5px;
+}
+#sli{
+	position: relative;
+	left: 20px;
+}
+#sli a{
+	text-decoration: none;
+	color: black;
+	font-size: 18px;
+}
+#sli span{
+	margin-left: 10px;
+}
+#seq{
+	text-align: center;
+	margin-top: 10px;
+	font-weight: bold;
+	font-size: 20px;
+}
+#toptop{
+	color: #0088BB;
+	font-weight: bold;
+	float: left;
+	font-size:38px ;
+}
+#go{
+	font-size: 15px;
+	color: red;
+	border: 1px solid red;
+	border-radius: 5px;
+}
+.tab1{
+	color: #E1472F;
+	background-color: #00A0DF;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="js/jquery-1.10.1.min.js"></script>
+    	<script src="js/jquery.mobile-1.4.2.min.js"></script>
+		<link href="js/jquery.mobile-1.4.2.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" type="text/css" href="css/carclass.css"/>
+		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
+		<title></title>
+	</head>
+	<body>
+		<div data-role="page" id="home">
+			<div data-role = "header" data-position="fixed" data-id="ca-travel" data-ajax=false>
+				<div data-role="navbar">
+					<img src="images/logo.jpg" width="100%"/>
+					<form style="width: 30%;position: absolute;left: 65%;top: 5%;">
+						<input type="text" id="search1" value=""/>		
+					</form>	
+					<ul>
+						<li><a href="index.html"  data-ajax=false>新闻中心</a></li>
+						<li><a href="picture.html"  data-ajax=false>图片简介</a></li>
+						<li><a href="video.html"  data-ajax=false>视频</a></li>
+						<li><a href="topic.html"  data-ajax=false>话题</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="content" style="background-color: white;">
+				<form action="" method="post" style="width: 70%;font-weight: bold;">
+					姓名：
+					<input type="text" value="" />
+					性别：
+					<input type="text"/>
+					手机号码：
+					<input type="text">
+					生日日期：
+					<input type="date">
+					电子邮件：
+					<input type="email">
+				</form>
+				<center>
+					<a href="#confirmDialog" data-role="button" data-inline="true">提交</a>
+				</center>
+			</div>
+			<div data-role="footer" data-position="fixed" data-id="ca-travel"  data-ajax=false>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-icon=home  data-ajax=false>首页</a></li>
+					<li><a href="BBS.html" data-icon=edit data-ajax=false>论坛</a></li>
+					<li><a href="select.html" data-icon=grid data-ajax=false>选车</a></li>
+					<li><a href="registration.html" data-icon=info data-ajax=false>会员</a></li>
+					<li><a href="login.html" data-icon=user data-ajax=false>登录</a></li>
+				</ul>	
+			</div>
+			</div>
+		</div>
+		<div id="confirmDialog" data-role="page" data-dialog="true">
+			<div data-role="header">
+				<h2>确认</h2>
+			</div>
+			<div class="ui-content" role="main">
+				<h2>请确认是否注册会员？</h2>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a href="#home" id="confirmBtn" data-role="button" data-mini="true">确认注册</a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#home" id="cancelBtn" data-role="button" data-mini="true">取消注册</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

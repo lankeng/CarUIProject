@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="js/jquery-1.10.1.min.js"></script>
+    	<script src="js/jquery.mobile-1.4.2.min.js"></script>
+		<link href="js/jquery.mobile-1.4.2.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" type="text/css" href="css/carclass.css"/>
+		<link rel="stylesheet" type="text/css" href="css/verify.css">
+		<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
+		<title></title>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/verify.js" ></script>
+		<script>
+			$(function () {
+				$("#btn2").click(
+					function(){
+						$("#focus1").css("background-color","red");
+						$("#focus2").css("background-color","red");
+					}
+				);
+				$("#focus1,#focus2").focus(
+					function(){
+						$("#focus1").css("background-color","blue");
+						$("#focus2").css("background-color","blue");
+					}
+				);
+				
+			});
+		</script>
+	</head>
+	<body>
+		<div data-role="page">
+			<div data-role = "header" data-position="fixed" data-id="ca-travel" data-ajax=false>
+				<div data-role="navbar">
+					<img src="images/logo.jpg" width="100%"/>
+					<form style="width: 30%;position: absolute;left: 65%;top: 5%;">
+						<input type="text" id="search1" value=""/>		
+					</form>	
+					<ul>
+						<li><a href="index.html"  data-ajax=false>新闻中心</a></li>
+						<li><a href="picture.html"  data-ajax=false>图片简介</a></li>
+						<li><a href="video.html"  data-ajax=false>视频</a></li>
+						<li><a href="topic.html"  data-ajax=false>话题</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="content" style="background-color: white;">
+				<form action="" method="post" id="form1">
+					<div style="text-align: center;font-weight: bold;">登录：</div>
+					<input type="text" id="focus1"/>
+					<div style="text-align: center;font-weight: bold;">密码：</div>
+					<input id="focus2" type="password" />
+					<div id="mpanel3"></div>
+					<center>
+					<input type="submit" data-inline="true" id="check-btn2" value="提交"/>
+					<input type="reset" data-inline="true" value="重置" id="btn2" />
+					</center>
+					<script type="text/javascript">
+						$('#mpanel3').codeVerify({
+							type : 2,
+							figure : 100,	//位数，仅在type=2时生效
+							arith : 0,	//算法，支持加减乘，不填为随机，仅在type=2时生效
+							width : '200px',
+							height : '50px',
+							fontSize : '30px',
+							btnId : 'check-btn2',
+							ready : function() {
+							},
+							success : function() {
+								alert('验证匹配！');
+							},
+							error : function() {
+								alert('验证码不匹配！');
+							}
+						});
+					</script>
+					<div id="userpass">
+						<a href="registration.html">注&nbsp;&nbsp;&nbsp;&nbsp;册</a>&nbsp;|&nbsp;<a href="">忘记密码</a>
+					</div>
+				</form>
+			</div>
+			<div data-role="footer" data-position="fixed" data-id="ca-travel"  data-ajax=false>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-icon=home  data-ajax=false>首页</a></li>
+					<li><a href="BBS.html" data-icon=edit data-ajax=false>论坛</a></li>
+					<li><a href="select.html" data-icon=grid data-ajax=false>选车</a></li>
+					<li><a href="registration.html" data-icon=info data-ajax=false>注册</a></li>
+					<li><a href="login.html" data-icon=user data-ajax=false>登录</a></li>
+				</ul>	
+			</div>
+		</div>
+		</div>
+	</body>
+</html>
